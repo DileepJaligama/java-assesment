@@ -1,0 +1,37 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a java program to find if a number is positive or negative, return true if positive or return false.</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question14 {
+    public static void main(String args[]){
+        int number = 1547;
+        boolean result = Question14.trueOrFalse(number);
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+public class Question14 {
+    public static void main(String args[]){
+        int number = 1547;
+        boolean result = Question14.trueOrFalse(number);
+    }
+    public static  boolean trueOrFalse(int number){
+        boolean verify;
+        if(number &gt;= 0 ){
+            verify = true;
+        } else{
+            verify = false;
+        }
+        return verify;
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question14", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

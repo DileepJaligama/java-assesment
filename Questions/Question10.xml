@@ -1,0 +1,34 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a Java program to convert temperature from Fahrenheit to celsius degrees .
+            Ex: 212.0 degree fahrenheit is equal to 100.0 in celsius
+        </label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question10 {
+    public static void main(String args[]){
+        double fheit = 352;
+        double result = Question10.convert(fheit);
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+public class Question10 {
+    public static void main(String args[]){
+        double fheit = 352;
+        double result = Question10.convert(fheit);
+    }
+    public static double convert(double heit){
+        double celsius = (( 5 *(heit - 32.0)) / 9.0);
+        return celsius;
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question10", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

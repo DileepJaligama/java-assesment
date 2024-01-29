@@ -1,0 +1,37 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write java program to sort the elements of array in Ascending order</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+import java.util.Arrays;
+
+public class Question26 {
+    public static void main(String[] args) {
+        int[] array = {5, 2, 9, 1, 5, 6};
+        int [] result = sortAscending(array);
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+import java.util.Arrays;
+
+public class Question26 {
+    public static void main(String[] args) {
+        int[] array = {5, 2, 9, 1, 5, 6};
+        int [] result = sortAscending(array);
+    }
+    public static int[] sortAscending(int[] arr) {
+        Arrays.sort(arr);
+        return arr;
+    }
+}
+
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question26", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

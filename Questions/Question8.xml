@@ -1,0 +1,42 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a java program to return the unique elements in an array.</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+public class Question8 {
+    public static void main(String args[]){
+        int[] firstArray = {1,12,5,7,8,9,10,5,7,8};
+        ArrayList&lt;Integer&gt; result =  Question8.uniqueElements(firstArray);
+    }
+}
+
+            </initial_display>
+            <answer_display>
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+public class Question8 {
+    public static void main(String args[]){
+        int[] firstArray = {1,12,5,7,8,9,10,5,7,8};
+        ArrayList&lt;Integer&gt; result =  Question8.uniqueElements(firstArray);
+    }
+    public static ArrayList&lt;Integer&gt; uniqueElements(int[] firstArray){
+        HashSet&lt;Integer&gt; map = new HashSet&lt;&gt;();
+        for (int j : firstArray) {
+            map.add(j);
+        }
+        return new ArrayList&lt;&gt;(map);
+    }
+}
+
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question8", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

@@ -1,0 +1,48 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a java program to concatenate letters of two strings alternatively Ex: str1 = "java", str2 = "python", output - "jpayvtahon"  </label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question3 {
+
+    public static void main(String[] args){
+        String result = Question3.program();
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+public class Question3 {
+
+    public static void main(String[] args){
+        String a = "abcfsed";
+        String b = "fghjikl";
+        String result = Question3.program(a,b);
+
+    }
+    public static  String program(String a,String b){
+        String firstString = a.replace(" ","");
+        String secondString = b.replace(" ","");
+        String combinedString = "";
+        int maxLength = Math.max(firstString.length(),secondString.length());
+        for(int i = 0; i&lt;= maxLength    ; i++){
+            if(i &lt;= firstString.length() - 1){
+                combinedString += firstString.toCharArray()[i];
+            }
+            if(i &lt;= secondString.length() - 1){
+                combinedString += secondString.toCharArray()[i];
+            }
+        }
+        return combinedString;
+    }
+
+
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question3", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

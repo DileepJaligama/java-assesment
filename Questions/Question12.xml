@@ -1,0 +1,38 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a java  program to calculate the product of all numbers in an array and return it.</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question12 {
+    public static void main(String[] args) {
+        int[] array = {12,2,1};
+        long product = Question12.calculateProduct(array);
+    }
+    //you code goes here
+}
+            </initial_display>
+            <answer_display>
+
+public class Question12 {
+    public static void main(String[] args) {
+        int[] array = {12,2,1};
+        long product = Question12.calculateProduct(array);
+
+    }
+
+    public static long calculateProduct(int[] arr) {
+        long product = 1;
+        for (int a : arr){
+            product *= a;
+        }
+        return  product;
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question12", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

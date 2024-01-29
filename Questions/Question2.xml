@@ -1,0 +1,43 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a java program to find the second largest element in array</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+
+public class Question2 {
+    public static void main(String args[]){
+        int result = Question2.secondLarge();
+    }
+    //your coe goes here
+}
+            </initial_display>
+            <answer_display>
+
+public class Question2 {
+    public static void main(String args[]){
+        int result = Question2.secondLarge();
+    }
+    public static int secondLarge(){
+        int []arr = {10,5,20,15,87,15,40};
+        int bigElement = arr[0];
+        int secondBig = Integer.MIN_VALUE;
+        for(int i = 0; i &lt;= arr.length - 1  ; i++){
+            if(bigElement &lt; arr[i]){
+                secondBig = bigElement;
+                bigElement = arr[i];
+            }   else if (arr[i] > secondBig &amp; arr[i] != bigElement) {
+                secondBig = arr[i];
+            }
+    }
+        return  secondBig;
+    }
+}
+
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question2", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

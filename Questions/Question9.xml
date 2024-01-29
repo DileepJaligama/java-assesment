@@ -1,0 +1,39 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a Java program that reads an integer between 0 and 1000 and adds all the digits in the integer and return it. Ex: input 564, output 15</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question9 {
+    public static void main(String args[]){
+        int num = 224;
+        int result = Question9.sum(num);
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+public class Question9 {
+    public static void main(String args[]){
+        int num = 224;
+        int result = Question9.sum(num);
+    }
+    public static int sum(int num){
+        int firstDigit = num % 10;
+        int remainingNumber = num / 10;
+        int SecondDigit = remainingNumber % 10;
+        remainingNumber = remainingNumber / 10;
+        int thirdDigit = remainingNumber % 10;
+        remainingNumber = remainingNumber / 10;
+        int fourthDigit = remainingNumber % 10;
+        int sum = thirdDigit + SecondDigit + firstDigit + fourthDigit;
+        return sum;
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question9", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

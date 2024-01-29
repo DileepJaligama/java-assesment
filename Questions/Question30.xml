@@ -1,0 +1,43 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a java program to find smallest element in array</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question30 {
+    public static void main(String[] args) {
+        int[] numbers = {45, 78, 23, 56, 90, 12, 67};
+
+        int minElement = findMinElement(numbers);
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+
+public class Question30 {
+    public static void main(String[] args) {
+        int[] numbers = {45, 78, 23, 56, 90, 12, 67};
+
+        int minElement = findMinElement(numbers);
+    }
+
+    public static int findMinElement(int[] arr) {
+
+        int min = arr[0];
+        for (int i = 1; i &lt; arr.length; i++) {
+            if (arr[i] &lt; min) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+}
+
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question30", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

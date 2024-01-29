@@ -1,0 +1,36 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a Java program to find if 55 is a fibonacci number or not and return true if it is fibonacci else false.</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question15 {
+    public static void main(String[] args) {
+        int numberToCheck = 55;
+        boolean result = isFibonacciNumber(numberToCheck);
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+
+public class Question15 {
+    public static void main(String[] args) {
+        int numberToCheck = 55;
+        boolean result = isFibonacciNumber(numberToCheck);
+    }
+    public static boolean isPerfectSquare(int num) {
+        int srt = (int) Math.sqrt(num);
+        return srt * srt == num;
+    }
+    public static boolean isFibonacciNumber(int num) {
+        return isPerfectSquare(5 * num * num + 4) || isPerfectSquare(5 * num * num - 4);
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question15", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

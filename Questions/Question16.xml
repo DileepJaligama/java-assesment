@@ -1,0 +1,44 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a java program to find a number is armstrong number or not return true if num is armstrong else false</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question16 {
+    public static  void main(String args[]){
+        int arm = 153;
+        boolean result = Question16.armStrong(arm);
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+public class Question16 {
+    public static  void main(String args[]){
+        int arm = 153;
+        boolean result = Question16.armStrong(arm);
+    }
+    public static boolean armStrong(int arm){
+        int  temp, total = 0, number;
+        number = arm;
+        boolean res;
+        while(number != 0){
+            temp = number % 10;
+            total = total + temp*temp*temp;
+            number = number / 10;
+        }
+        if(total == arm){
+            res = true;
+        } else{
+            res = false;
+        }
+        return res;
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question16", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

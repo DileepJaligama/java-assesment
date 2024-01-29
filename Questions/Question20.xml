@@ -1,0 +1,54 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a program to find all vowels and consonants of a string and return vowels in a hashmap key and consonants as values</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+import java.util.HashMap;
+
+public class Question20 {
+    public static void main(String args[]){
+        String str = "hello world";
+        HashMap&lt;String,String&gt; result =  Question20.vowelsAndConsonants(str);
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+
+import java.util.HashMap;
+
+public class Question20 {
+    public static void main(String args[]){
+        String str = "hello world";
+        HashMap&lt;String,String&gt; result =  Question20.vowelsAndConsonants(str);
+    }
+    public static HashMap&lt;String,String&gt; vowelsAndConsonants(String sampleStrng){
+        String str = sampleStrng.replace(" ","");
+        HashMap&lt;String,String&gt; data = new HashMap&lt;&gt;();
+        StringBuilder vowels = new StringBuilder();
+        StringBuilder consonants = new StringBuilder();
+        String lowercaseData = str.toLowerCase();
+        for(int i =0; i&gt; str.length();i++){
+            char ch = lowercaseData.charAt(i);
+            if(Character.isLetter(ch)){
+                if(ch == 'a' ||  ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+                    vowels.append(ch);
+                } else {
+                    consonants.append(ch);
+                }
+            }
+        }
+        String vowelsKey = vowels.toString();
+        data.put(vowelsKey,consonants.toString());
+        return data;
+    }
+}
+
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question20", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

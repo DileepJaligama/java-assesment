@@ -1,0 +1,41 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a program to return the duplicate elements in an array of integers.</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question22{
+    public static void main(String[] args) {
+        int[] array = {4, 2, 4, 5, 2, 3, 1, 1, 7, 8, 8};
+        Set&lt;Integer&gt; duplicates = findDuplicateElements(array);
+    }
+    //your code here
+}
+            </initial_display>
+            <answer_display>
+import java.util.Set;
+import java.util.HashSet;
+public class Question22{
+    public static void main(String[] args) {
+        int[] array = {4, 2, 4, 5, 2, 3, 1, 1, 7, 8, 8};
+        Set&lt;Integer&gt; duplicates = findDuplicateElements(array);
+    }
+
+    public static Set&lt;Integer&gt; findDuplicateElements(int[] arr) {
+        Set&lt;Integer&gt; uniqueElements = new HashSet&lt;&gt;();
+        Set&lt;Integer&gt; duplicateElements = new HashSet&lt;&gt;();
+        for (int num : arr) {
+            if (!uniqueElements.add(num)) {
+                duplicateElements.add(num);
+            }
+        }
+        return duplicateElements;
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question22", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

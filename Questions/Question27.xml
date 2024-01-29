@@ -1,0 +1,45 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write java program to remove duplicates from an array using LinkedHashSet and return them</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+import java.util.LinkedHashSet;
+import java.util.Arrays;
+public class Question27 {
+    public static void main(String[] args) {
+        int[] array = {2, 5, 8, 2, 9, 5, 6, 8, 1};
+        int[] uniqueArray = Question27.removeDuplicates(array);
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+import java.util.LinkedHashSet;
+import java.util.Arrays;
+public class Question27 {
+    public static void main(String[] args) {
+        int[] array = {2, 5, 8, 2, 9, 5, 6, 8, 1};
+        int[] uniqueArray = Question27.removeDuplicates(array);
+    }
+    public static int[] removeDuplicates(int[] arr) {
+        LinkedHashSet&lt;Integer&gt; set = new LinkedHashSet&lt;&gt;();
+
+        for (int num : arr) {
+            set.add(num);
+        }
+        int[] uniqueArray = new int[set.size()];
+        int index = 0;
+        for (int num : set) {
+            uniqueArray[index++] = num;
+        }
+        return uniqueArray;
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question27", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

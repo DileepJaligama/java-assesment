@@ -1,0 +1,39 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a java program to sort the string in ascending order.
+            Ex: before sorting = “qwert”, after sorting = “eqrtw”.</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+import java.util.Arrays;
+public class Question13 {
+    public static void main(String args[]){
+        String sample = "hello world";
+        String result = Question13.stringSorting(sample);
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+import java.util.Arrays;
+public class Question13 {
+    public static void main(String args[]){
+        String sample = "hello world";
+        String result = Question13.stringSorting(sample);
+
+    }
+    public static String stringSorting(String sample){
+        String sam = sample.replace(" ","");
+        char charArray[] = sam.toCharArray();
+        Arrays.sort(charArray);
+        return new String (charArray);
+    }
+}
+
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question13", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

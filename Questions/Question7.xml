@@ -1,0 +1,59 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a java program to find all prime numbers between two numbers and the first number should be smaller than second number return them in an arraylist</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Question7 {
+    public static void main(String []args){
+        int [] result = Question7.prime();
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Question7 {
+    public static void main(String []args)
+    {
+        int firstNum = 200;
+        int secondNum =220;
+        int [] result = Question7.prime(firstNum, secondNum);
+
+    }
+    public static int[] prime(int first,int second){
+        ArrayList&lt;Integer&gt; prime = new ArrayList&lt;&gt;();
+        for(int i = first; i &lt;= second; i++){
+            int count = 0;
+            for( int j=i; j&gt;=1 ; j--){
+                if(i%j==0) {
+                    count ++;
+                }
+            }
+            if(count == 2){
+                prime.add(i);
+            }
+        }
+        int [] array = new int[prime.size()];
+        for(int k=0; k &lt; prime.size();k++){
+            array[k] = prime.get(k);
+        }
+        return array;
+    }
+}
+
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question7", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

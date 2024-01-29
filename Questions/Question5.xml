@@ -1,0 +1,35 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a java program to find factorial of a number</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question5{
+    public static void main(String args[]){
+        int result  = Question5.factorial();
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+public class Question5{
+    public static void main(String args[]){
+        int num = 7;
+        int result  = Question5.factorial(num);
+
+    }
+    public static int factorial(int num){
+        int fact = 1;
+        for(int i = num; i &gt;= 1 ; i--){
+            fact = fact * i ;
+        }
+        return fact;
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question5", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

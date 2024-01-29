@@ -1,0 +1,39 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a java program to insert an element in a specific index of an array</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question6 {
+    public static  void  main(String args[]){
+        int[] result = Question6.insert();
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+public class Question6 {
+    public static  void  main(String args[]){
+
+        int[] arr = {10,2,5,4,4,8,9};
+        int indexPosition = 2;
+        int valueToInsert = 10;
+        int[] result = Question6.insert(arr,indexPosition,valueToInsert);
+    }
+    public static int[] insert(int[] arr,int indexPosition,int valueToInsert){
+
+        for(int i = arr.length - 1  ; i &gt; indexPosition ; i--){
+            arr[i] = arr[i-1];
+        }
+        arr[indexPosition] = valueToInsert;
+        return arr;
+    }
+}
+
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question6", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

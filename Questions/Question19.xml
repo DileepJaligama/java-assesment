@@ -1,0 +1,45 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write a program to reverse a number</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+public class Question19 {
+
+    public static void main(String[] args) {
+        int number = 123;
+        int reversedNumber = reverseNumber(number);
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+
+public class Question19 {
+
+    public static void main(String[] args) {
+        int number = 123;
+        int reversedNumber = reverseNumber(number);
+    }
+
+    public static int reverseNumber(int num) {
+        int reversedNum = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reversedNum = reversedNum * 10 + digit;
+            num /= 10;
+        }
+
+        return reversedNum;
+    }
+
+}
+
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question19", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>

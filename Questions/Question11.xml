@@ -1,0 +1,42 @@
+<problem>
+    <coderesponse queuename="openedx">
+        <label>Write java program to swap two numbers without using third variable</label>
+        <textbox rows="15" cols="80" mode="java" tabsize="4"/>
+        <codeparam>
+            <initial_display>
+
+import java.util.ArrayList;
+public class Question11 {
+    public static void main(String args[]){
+        int a = 5;
+        int b = 20;
+        ArrayList&lt;Integer&gt; result = Question11.swap(a,b);
+    }
+    //your code goes here
+}
+            </initial_display>
+            <answer_display>
+import java.util.ArrayList;
+public class Question11 {
+    public static void main(String args[]){
+        int a = 5;
+        int b = 20;
+        ArrayList&lt;Integer&gt; result = Question11.swap(a,b);
+    }
+    public static ArrayList&lt;Integer&gt; swap(int a, int b){
+        ArrayList&lt;Integer&gt; array = new ArrayList&lt;&gt;>();
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        array.add(a);
+        array.add(b);
+        return  array;
+    }
+}
+            </answer_display>
+            <grader_payload>
+                {"program_name": "Question11", "program_output": "n/a", "program_language": "java", "solution_repo": "git@git.cklabs.com:cklabs/edx-grader-java-assessment-reference-repo.git"}
+            </grader_payload>
+        </codeparam>
+    </coderesponse>
+</problem>
